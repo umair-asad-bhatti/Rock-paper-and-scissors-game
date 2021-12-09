@@ -1,0 +1,198 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    
+}
+body
+{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.score_nav
+{
+    
+    
+    background-color: rgb(228, 226, 226);
+    display: flex;
+    min-height: 20vh;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.score
+{
+    display: flex;
+    
+    width: 300px;
+    height: 80px;
+    /* background-color: red; */
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: 20px;
+}
+.start
+{
+    min-height: 80vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(27, 73, 85);
+    color: rgb(212, 212, 212);
+    transition: opacity 1s ease;
+    
+}
+.start h1
+{
+    font-size: 60px;
+}
+.start button
+{
+    width: 150px;
+    height: 50px;
+    border: none;
+    outline: none;
+    background:none;
+    font-size: 20px;
+    font-weight: bolder;
+    color: rgb(212, 212, 212);
+    cursor: pointer;
+    
+}
+.start button:hover
+{
+    color: yellow;
+}
+.match
+{
+
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(27, 73, 85);
+    border: 1px solid black;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top:20vh;
+    left: 0;
+    transition:  0.5s ease;
+
+    
+}
+.images
+{
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    
+ 
+}
+
+.play_buttons
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 100px;
+    
+
+}
+.play_buttons button
+{
+    width: 150px;
+    height: 50px;
+    border: 2px solid whitesmoke;
+    border-radius: 30px;
+    outline: none;
+    background:none;
+    font-size: 20px;
+    font-weight: bolder;
+    color: rgb(212, 212, 212);
+}
+#player_hand
+{
+    transform: rotateY(180deg);
+    
+}
+
+.remove
+{
+    opacity: 0;
+    pointer-events: none;
+}
+.show
+{
+    opacity: 1;
+    pointer-events: all;
+}
+
+
+/* //now lets createa animation for our hands
+ */
+ @keyframes playerAnimation {
+     
+    0%
+    {
+        transform: translateY(0px) rotateY(180deg); 
+    }
+
+    20%
+    {
+        transform: translateY(20px) rotateY(180deg);
+    }
+    40%
+    {
+        transform: translateY(-20px) rotateY(180deg);
+    }
+    60%
+    {
+        transform: translateY(20px) rotateY(180deg);
+    }
+    80%
+    {
+        transform: translateY(-20px) rotateY(180deg);
+    }
+    100%
+    {
+        transform: translateY(0px) rotateY(180deg);
+    }
+ }
+
+
+ @keyframes ComputerAnimation {
+     
+    0%
+    {
+        transform: translateY(0px); 
+    }
+
+    20%
+    {
+        transform: translateY(20px);
+    }
+    40%
+    {
+        transform: translateY(-20px);
+    }
+    60%
+    {
+        transform: translateY(20px);
+    }
+    80%
+    {
+        transform: translateY(-20px);
+    }
+    100%
+    {
+        transform: translateY(0px);
+    }
+ }
